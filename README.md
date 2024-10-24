@@ -103,7 +103,7 @@ echo "nameserver mi_ip" > /etc/resolv.conf
 > [!TIP]
 > sustituye mi_ip por la dirección IP de tu servidor DNS.Si renicas la maquina, este fichero se perderá y lo tienes que volver a configurar.
 
-```bash
+
 
 Para comprobar que la resolución de nombres funciona correctamente, ejecutamos el siguiente comando:
 

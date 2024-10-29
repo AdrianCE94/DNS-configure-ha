@@ -61,7 +61,7 @@ Mi zona va a ser adriance.es y mi zona inversa va a ser 1.168.192.in-addr.arpa, 
 Para crear los ficheros de cada zona, copiamos los ficheros de ejemplo que vienen en la carpeta `/etc/bind/` y los renombramos.
 
 ```bash
- cp /etc/bind/db.empy /var/cache/bind/db.adriance.es # zona directa
+ cp /etc/bind/db.empty /var/cache/bind/db.adriance.es # zona directa
  cp /etc/bind/db.127 /var/cache/bind/db.192 # zona inversa
 ```
 

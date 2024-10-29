@@ -27,7 +27,7 @@ BIND (Berkeley Internet Name Domain) es un software de servidor de nombres de do
 Para instalar bind9 en Debian, ejecutamos el siguiente comando:
 
 ```bash
-sudo apt update && sudo apt install bind9 -y
+ apt update &&  apt install bind9 -y
 ```
 
 Nos vamos a conectar por ssh a nuestra maquina para poder configurar el servidor DNS.
@@ -61,8 +61,8 @@ Mi zona va a ser adriance.es y mi zona inversa va a ser 1.168.192.in-addr.arpa, 
 Para crear los ficheros de cada zona, copiamos los ficheros de ejemplo que vienen en la carpeta `/etc/bind/` y los renombramos.
 
 ```bash
-sudo cp /etc/bind/db.empy /var/cache/bind/db.adriance.es # zona directa
-sudo cp /etc/bind/db.127 /var/cache/bind/db.192 # zona inversa
+ cp /etc/bind/db.empy /var/cache/bind/db.adriance.es # zona directa
+ cp /etc/bind/db.127 /var/cache/bind/db.192 # zona inversa
 ```
 
 Editamos el fichero con nano `/var/cache/bind/db.adriance.es` y agregamos los registros de la zona directa. En mi caso voy a probar con 3 registros www,ftp y ns1.
@@ -78,9 +78,9 @@ Hemos modificado la plantilla con los registros que necesitamos, ahora vamos a m
 Para validar la configuración, ejecutamos el siguiente comando:
 
 ```bash
-sudo named-checkconf
-sudo named-checkzone adriance.es /var/cache/bind/db.adriance.es
-sudo named-checkzone 1.168.192.in-addr.arpa /var/cache/bind/db.192
+ named-checkconf
+ named-checkzone adriance.es /var/cache/bind/db.adriance.es
+ named-checkzone 1.168.192.in-addr.arpa /var/cache/bind/db.192
 ```
 > [!TIP]
 ![alt text](image-5.png)
